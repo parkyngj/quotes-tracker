@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/parkyngj/quotes-tracker/issues"
   },
-  "homepage": "https://github.com/parkyngj/quotes-tracker#readme"
+  "homepage": "https://github.com/parkyngj/quotes-tracker#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
