@@ -12,6 +12,7 @@ app.listen(3000, function(){
 // app.get(path, callback)
 app.get('/', function(request, response) {
   // Note: __dirname is directory that contains the JS source code
-  console.log(__dirname);
-  // response.sendFile(__dirname + '/index.html')
+  // console.log(__dirname);
+  //=> returns /Users/spark/proyects/quotes-tracker
+  response.sendFile(__dirname + '/index.html')
 })

@@ -18,5 +18,8 @@
   "homepage": "https://github.com/parkyngj/quotes-tracker#readme",
   "dependencies": {
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodeman": "^1.1.2"
   }
 }
