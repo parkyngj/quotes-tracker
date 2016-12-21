@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodeman server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,5 @@
   "homepage": "https://github.com/parkyngj/quotes-tracker#readme",
   "dependencies": {
     "express": "^4.14.0"
-  },
-  "devDependencies": {
-    "nodeman": "^1.1.2"
   }
 }
