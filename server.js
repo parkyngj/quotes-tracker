@@ -12,17 +12,16 @@ MongoClient.connect('mongodb://parkyngj:parkyngj1@ds141368.mlab.com:41368/quotes
   }
 
   db = database
-
+  // create server where browsers can connect to
+  // do so w/ help of listen method provided by express
+  // app.listen(3000, function(){
+  //   console.log('listening on 3000')
   app.listen(3000, function(){
-    console.log('listening on 3000')
-  })
+    console.log('listening on 3000');
+  });
 });
 
-// create server where browsers can connect to
-// do so w/ help of listen method provided by express
-// app.listen(3000, function(){
-//   console.log('listening on 3000')
-})
+
 
 // in express, handle GET request with get method
 // app.get(path, callback)
@@ -31,4 +30,8 @@ app.get('/', function(request, response) {
   // console.log(__dirname);
   //=> returns /Users/spark/proyects/quotes-tracker
   response.sendFile(__dirname + '/index.html')
-})
+});
+
+app.post('/quotes', function(req, res){
+  console.log(req.body);
+});
