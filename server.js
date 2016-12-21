@@ -7,3 +7,9 @@ const app = express();
 app.listen(3000, function(){
   console.log('listening on 3000')
 })
+
+// in express, handle GET request with get method
+// app.get(path, callback)
+app.get('/', function(request, response) {
+  response.send("Hello World")
+})
