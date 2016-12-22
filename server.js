@@ -33,7 +33,16 @@ app.get('/', function(request, response) {
   // Note: __dirname is directory that contains the JS source code
   // console.log(__dirname);
   //=> returns /Users/spark/proyects/quotes-tracker
-  response.sendFile(__dirname + '/index.html')
+  // response.sendFile(__dirname + '/index.html')
+
+  db.collection('quotes').find().toArray(function(err, result){
+    if (err){
+      return console.log(err)
+    };
+
+    // renders index.ejs
+    res.render('index.ejs', {quotes: result})
+  })
 });
 
 app.post('/quotes', function(req, res){
