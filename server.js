@@ -1,6 +1,10 @@
 // use express in server.js by requiring it
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.set('view engine', 'ejs');
 
 const MongoClient = require('mongodb').MongoClient
 
@@ -34,4 +38,13 @@ app.get('/', function(request, response) {
 
 app.post('/quotes', function(req, res){
   console.log(req.body);
+
+  db.collection('quotes').save(req.body, function(err, result){
+    if (err){
+      return console.log(err)
+    };
+
+    console.log("saved to database");
+    res.redirect('/');
+  })
 });
