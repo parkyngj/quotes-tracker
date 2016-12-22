@@ -29,11 +29,11 @@ MongoClient.connect('mongodb://parkyngj:parkyngj1@ds141368.mlab.com:41368/quotes
 
 // in express, handle GET request with get method
 // app.get(path, callback)
-app.get('/', function(request, response) {
+app.get('/', function(req, res) {
   // Note: __dirname is directory that contains the JS source code
   // console.log(__dirname);
   //=> returns /Users/spark/proyects/quotes-tracker
-  // response.sendFile(__dirname + '/index.html')
+  // res.sendFile(__dirname + '/index.html')
 
   db.collection('quotes').find().toArray(function(err, result){
     if (err){
